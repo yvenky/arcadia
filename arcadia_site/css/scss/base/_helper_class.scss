@@ -1,0 +1,41 @@
+/* ---------------------------------------------------------------- */
+/* Helper Class                              
+/* ---------------------------------------------------------------- */
+.page-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+.section {
+    padding: 100px 0;
+    overflow: hidden;
+}
+.border-none {
+    border: none;
+}
+// Owl Carousel
+.owl-carousel {
+    .owl-item img {
+        width: auto;
+        display: inline-block;
+    }
+    &.owl-theme .owl-nav.disabled + .owl-dots {
+        margin-top: 30px;
+        line-height: 0;
+    }
+    &.owl-theme .owl-dots .owl-dot {
+        &.active {
+            span {
+                background:   $color_theme_blue;
+            }
+        }
+        span {
+            background: transparent;
+            border: 2px solid  $color_theme_blue;
+            margin: 0 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 30px;
+            transition: all 0.5s ease;
+        }
+    }
+}

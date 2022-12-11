@@ -1,0 +1,56 @@
+/* ---------------------------------------------------------------- */
+/* Home Info                               
+/* ---------------------------------------------------------------- */
+.home-info-section {
+    background: $color_theme_blue;
+}
+.home-info-inner {
+    padding-top: 80px;
+    margin-bottom: 50px;
+    h4 {
+        color: $color_theme_yellow;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    p {
+        color: $color_white;
+    }
+}
+.home-info-box {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    .icon {
+        flex: 0 0 80px;
+    }
+    .text {
+        padding-left: 20px;
+        a, h6 {
+            color: $color_white;
+        }
+        h6 {
+            margin-bottom: 8px;
+        }
+    }
+}
+@media only screen and (max-width: 992px) {
+    .home-info-img {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+    .home-info-box {
+        margin-bottom: 25px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .home-info-box {
+        display: block;
+        .icon {
+            max-width: 60px;
+            margin-bottom: 15px;
+        }
+        .text {
+            padding-left: 0;
+        }
+    }
+}

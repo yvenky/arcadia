@@ -1,0 +1,157 @@
+/* ---------------------------------------------------------------- */
+/* Testimonial                               
+/* ---------------------------------------------------------------- */
+.testimonial-item {
+    margin-bottom: 30px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    background: $color_white;
+    transition: all 0.5s ease;
+    border: 1px solid rgba($color_theme_blue,0.1);
+    .ratings {
+        i {
+            color: darken($color_theme_yellow, 30%);
+        }
+    }
+    .body {
+        p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        span {
+            font-weight: 700;
+            color: darken($color_theme_yellow, 40%);
+        }
+    }
+}
+.our-testimonial {
+    background: $color_grey_manor;
+}
+#testimonialCarousel {
+    &.owl-theme {
+        .owl-nav {
+            margin-top: 0;
+            position: absolute;
+            top: -130px;
+            right: 0;
+            z-index: 5;
+            display: inline-block;
+            button {
+                margin: 10px;
+                display: inline-block;
+                background: $color_theme_blue;
+                text-transform: capitalize;
+                span {
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    color: $color_theme_yellow;
+                    transition: all 0.5s ease;
+                }
+                &:hover {
+                    background: $color_theme_yellow;
+                }
+            }
+            button.owl-prev {
+                margin-right: 0;
+            }
+        }
+        .owl-nav button span {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: $color_theme_yellow;
+            display: inline-block;
+            background: rgba($color_white,0.1);
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        .owl-nav button {
+            &:hover {
+                span {
+                    color: $color_black;
+                    background: $color_theme_yellow;
+                }
+            }
+        }
+        .owl-nav button.owl-next {
+            margin-right: 0 !important;
+        }
+    }
+}
+#testimonialCarousel.owl-theme .owl-nav button {
+    margin: 10px;
+    display: inline-block;
+    border-radius: 0;
+    text-transform: capitalize;
+}
+
+
+#testimonialCarousel {
+    &.owl-theme {
+        .owl-nav {
+            margin-top: 0;
+            position: absolute;
+            top: -130px;
+            right: 0;
+            z-index: 5;
+            display: inline-block;
+            button {
+                margin: 10px;
+                background: transparent;
+                display: inline-block;
+                text-transform: capitalize;
+                span {
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    color: $color_white;
+                    transition: all 0.5s ease;
+                }
+                &:hover {
+                    background: transparent;
+                }
+            }
+            button.owl-prev {
+                margin-right: 0;
+            }
+        }
+        .owl-nav button span {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: $color_black;
+            display: inline-block;
+            background: transparent;
+            border: 2px solid rgba($color_black, 0.1);
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        .owl-nav button {
+            &:hover {
+                span {
+                    border-color: $color_theme_blue;
+                    color: $color_theme_yellow;
+                    background:$color_theme_blue;
+                }
+            }
+        }
+        .owl-nav button.owl-next {
+            margin-right: 0 !important;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    #testimonialCarousel {
+        &.owl-theme {
+            .owl-nav {
+                display: none;
+            }
+        }
+    }
+}

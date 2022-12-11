@@ -1,0 +1,42 @@
+/* ---------------------------------------------------------------- */
+/* About                                                     
+/* ---------------------------------------------------------------- */
+.about-section {
+    position: relative;
+    .about-overlay-bg {
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        opacity: 0.5;
+        position: absolute;
+    }
+    .about-inner {
+        h3 {
+            text-transform: none;
+            font-size: 32px;
+            margin-bottom: 15px;
+            span {
+                text-decoration: underline;
+                color: $color_primary;
+            }
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query (less than 992px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width: 991.98px) {
+    .about-img {
+        margin-top: 20px;
+    }
+    .about-overlay-bg {
+       display: none;
+    }
+    .about-section .about-inner h3 {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,101 @@
+/* ---------------------------------------------------------------- */
+/* Gallery                        
+/* ---------------------------------------------------------------- */
+.portfolio-filter-light {
+    margin-bottom: 50px;
+    text-align: center;
+    display: inline-flex;
+    a {
+        font-size: 13px;
+        padding: 14px 20px;
+        background: transparent;
+        color: $color_black;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.25s ease;
+        border-bottom: 1px solid rgba($color_black, 0.2);
+        &.current {
+            border-color: $color_theme_blue;
+            background: $color_theme_blue;
+            color: $color_theme_yellow !important;
+        }
+        &:hover {
+            border-color: $color_theme_blue;
+            background: $color_theme_blue;
+            color: $color_theme_yellow !important;
+        }
+    }
+}
+.portfolio-item {
+    margin-bottom: 30px;
+    .portfolio-item-inner {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        &:hover {
+            box-shadow: 0 15px 25px 0 rgba($color_black, 0.4);
+        }
+    }
+}
+.pb-minus-70 {
+    padding-bottom: 70px;
+}
+.embed-responsive-margin {
+    padding-top: 70px;
+}
+/* ---------------------------------------------------------------- */
+/* Responsive Media Query
+ * Extra small devices (portrait phones, less than 450px)
+/* ---------------------------------------------------------------- */
+@media only screen and (max-width:768px) {
+    .portfolio-filter-light {
+        flex-wrap: wrap;
+        border: 1px solid rgba($color_black, 0.2);
+        border-bottom: 0;
+        a {
+            flex: 0 0 50%;
+            display: block;    
+        }
+    }
+}
+
+.
+
+.loader {     
+    opacity: 1;
+    transition: 2s opacity;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .right,
+  .left {
+    height: 100px;
+    position: absolute;
+    transition: 1s 2s;
+    opacity: 0;
+  }
+  
+  .left {
+    left: 0;
+    transform: translateX(-50em);  
+  }
+  
+  .right {
+    right: 0;
+    transform: translateX(50em);  
+  }
+  
+  .page_loaded .loader {
+    opacity: 0;
+  }
+  
+  .page_loaded .right,
+  .page_loaded .left {
+    opacity: 1;
+    transform: translateX(0);
+  }

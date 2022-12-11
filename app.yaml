@@ -1,0 +1,12 @@
+runtime: php74
+
+
+handlers:
+
+  - url: /
+    secure: always
+    static_files: arcadia_site/index.html
+    upload: arcadia_site/index.html
+
+  - url: /
+    static_dir: arcadia_site

@@ -1,0 +1,148 @@
+/* ---------------------------------------------------------------- */
+/* Instagram                            
+/* ---------------------------------------------------------------- */
+.instagram-section {
+    background:$color_theme_blue;
+}
+.instagram-card {
+    padding: 15px;
+    background: $color_white;
+    .i-img {
+        overflow: hidden;
+        position: relative;
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            background: $color_black;
+            display: inline-block;
+            position: absolute;
+            transition: all 0.25s ease;
+            pointer-events: none;
+        }
+        &:hover {
+            &:before {
+                opacity: 0.6;
+                visibility: visible;
+            }
+            a {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        a {
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            border-radius: 50%;
+            line-height: 50px;
+            text-align: center;
+            position: absolute;
+            display: inline-block;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s ease;
+            transform: translate(-50%,-50%);
+            background: $color_theme_blue;
+            color: $color_theme_yellow;
+            &:hover {
+                background: $color_theme_yellow;
+                color: $color_black;
+            }
+        }
+    }
+}
+.instagram-section-inner {
+    h4 {
+        color: $color_theme_yellow;
+        margin-bottom: 60px;
+    }
+}
+#instagramCarousel {
+    &.owl-theme {
+        .owl-nav {
+            margin-top: 0;
+            position: absolute;
+            top: -130px;
+            right: 0;
+            z-index: 5;
+            display: inline-block;
+            button {
+                margin: 10px;
+                display: inline-block;
+                background: transparent;
+                text-transform: capitalize;
+                span {
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                    line-height: 50px;
+                    color: $color_white;
+                    transition: all 0.5s ease;
+                }
+                &:hover {
+                    background: transparent;
+                }
+            }
+            button.owl-prev {
+                margin-right: 0;
+            }
+        }
+        .owl-nav button span {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: $color_white;
+            display: inline-block;
+            background: rgba($color_white,0.1);
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        .owl-nav button {
+            &:hover {
+                span {
+                    color: $color_black;
+                    background: $color_theme_yellow;
+                }
+            }
+        }
+        .owl-nav button.owl-next {
+            margin-right: 0 !important;
+        }
+    }
+}
+#instagramCarousel.owl-theme .owl-nav button {
+    margin: 10px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+#instagramCarousel {
+    &.owl-carousel.owl-theme .owl-dots .owl-dot span {
+        border-color: $color_white;
+    }
+     .owl-dots .owl-dot.active span {
+        background: $color_white;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #instagramCarousel {
+        &.owl-theme {
+            .owl-nav {
+                display: none;
+            }
+        }
+    }
+    .instagram-section-inner {
+        h4 {
+            text-align: center;
+        }
+    }
+}
